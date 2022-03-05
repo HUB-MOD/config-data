@@ -11,18 +11,3 @@ info:
     name: Spring Boot Actuator Demo
     web: *
   hello: Hi there!!!
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health, info, refresh, restart, env
-    health:
-      enabled: true
-    info:
-      enabled: true
-    refresh:
-      enabled: true
-    restart:
-      enabled: true
-    env:
-      enabled: true
