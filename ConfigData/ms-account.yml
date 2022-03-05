@@ -26,6 +26,3 @@ management:
       enabled: true
     env:
       enabled: true
-logging:
-  level:
-    root: info
