@@ -6,11 +6,7 @@ spring:
       database: credits
       host: localhost
       port: 27017
-info:
-  app:
-    name: Spring Boot Actuator Demo
-    web: *
-  hello: Hi there!!!
+
 management:
   endpoints:
     web:
