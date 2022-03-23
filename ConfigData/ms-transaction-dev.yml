@@ -1,6 +1,12 @@
 server:
   port: 8095
 
+application:
+  location: config (Github)
+  config:
+    profile: dev
+    description: configuration from 'ms-transaction-dev.yml'
+
 spring:
   data:
     mongodb:
@@ -11,7 +17,8 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka
+#      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://eureka-server:8761/eureka
 
 backend:
   service:

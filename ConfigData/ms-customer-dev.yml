@@ -1,23 +1,24 @@
 server:
-  port: 8095
+  port: 8093
+
+application:
+  location: config (Github)
+  config:
+    profile: dev
+    description: configuration from 'ms-customer-dev.yml'
 
 spring:
   data:
     mongodb:
-      database: transactions
+      database: customers
       host: localhost
       port: 27017
 
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka
-
-backend:
-  service:
-    url: http://localhost:8094/payment/get/{id}
-  eureka:
-    url: http://ms-payment/payment/get/{id}
+#      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://eureka-server:8761/eureka
 
 management:
   endpoints:
