@@ -32,41 +32,41 @@ services:
       eureka-server:
         condition: service_started
 
-  ms-account:
-    image:  bootcamp2022/ms-account
-    restart: always
-    ports:
-       - 8091:8091
-    depends_on:
-       mongodb:
-           condition: service_started
-       config-server:
-           condition: service_started
-       eureka-server:
-           condition: service_started
-       gateway-server:
-           condition: service_started
-    environment:
-       #- MONGODB_CONNSTRING=mongodb://bootcamp:secret@mongodb
-       spring.data.mongodb.host: mongodb
-
-  ms-credit:
-    image:  bootcamp2022/ms-credit
-    restart: always
-    ports:
-       - 8092:8092
-    depends_on:
-       mongodb:
-           condition: service_started
-       config-server:
-           condition: service_started
-       eureka-server:
-           condition: service_started
-       gateway-server:
-           condition: service_started
-    environment:
-       #- MONGODB_CONNSTRING=mongodb://bootcamp:secret@mongodb
-       spring.data.mongodb.host: mongodb
+#  ms-account:
+#    image:  bootcamp2022/ms-account
+#    restart: always
+#    ports:
+#       - 8091:8091
+#    depends_on:
+#       mongodb:
+#           condition: service_started
+#       config-server:
+#           condition: service_started
+#       eureka-server:
+#           condition: service_started
+#       gateway-server:
+#           condition: service_started
+#    environment:
+#       #- MONGODB_CONNSTRING=mongodb://bootcamp:secret@mongodb
+#       spring.data.mongodb.host: mongodb
+#
+#  ms-credit:
+#    image:  bootcamp2022/ms-credit
+#    restart: always
+#    ports:
+#       - 8092:8092
+#    depends_on:
+#       mongodb:
+#           condition: service_started
+#       config-server:
+#           condition: service_started
+#       eureka-server:
+#           condition: service_started
+#       gateway-server:
+#           condition: service_started
+#    environment:
+#       #- MONGODB_CONNSTRING=mongodb://bootcamp:secret@mongodb
+#       spring.data.mongodb.host: mongodb
 
   ms-customer:
     image:  bootcamp2022/ms-customer
@@ -86,38 +86,38 @@ services:
       #- MONGODB_CONNSTRING=mongodb://bootcamp:secret@mongodb
       spring.data.mongodb.host: mongodb
 
-  ms-payment:
-    image:  bootcamp2022/ms-payment
-    restart: always
-    ports:
-      - 8094:8094
-    depends_on:
-      mongodb:
-        condition: service_started
-      config-server:
-        condition: service_started
-      eureka-server:
-        condition: service_started
-      gateway-server:
-        condition: service_started
-    environment:
-      #- MONGODB_CONNSTRING=mongodb://bootcamp:secret@mongodb
-      spring.data.mongodb.host: mongodb
-
-  ms-transaction:
-    image:  bootcamp2022/ms-transaction
-    restart: always
-    ports:
-       - 8095:8095
-    depends_on:
-       mongodb:
-           condition: service_started
-       config-server:
-           condition: service_started
-       eureka-server:
-           condition: service_started
-       gateway-server:
-           condition: service_started
-    environment:
-       #- MONGODB_CONNSTRING=mongodb://bootcamp:secret@mongodb
-       spring.data.mongodb.host: mongodb
+#  ms-payment:
+#    image:  bootcamp2022/ms-payment
+#    restart: always
+#    ports:
+#      - 8094:8094
+#    depends_on:
+#      mongodb:
+#        condition: service_started
+#      config-server:
+#        condition: service_started
+#      eureka-server:
+#        condition: service_started
+#      gateway-server:
+#        condition: service_started
+#    environment:
+#      #- MONGODB_CONNSTRING=mongodb://bootcamp:secret@mongodb
+#      spring.data.mongodb.host: mongodb
+#
+#  ms-transaction:
+#    image:  bootcamp2022/ms-transaction
+#    restart: always
+#    ports:
+#       - 8095:8095
+#    depends_on:
+#       mongodb:
+#           condition: service_started
+#       config-server:
+#           condition: service_started
+#       eureka-server:
+#           condition: service_started
+#       gateway-server:
+#           condition: service_started
+#    environment:
+#       #- MONGODB_CONNSTRING=mongodb://bootcamp:secret@mongodb
+#       spring.data.mongodb.host: mongodb
